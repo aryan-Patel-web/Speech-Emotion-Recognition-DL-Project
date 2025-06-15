@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Emotion Recognition Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 40px;
+        }
+
+        form {
+            margin-top: 20px;
+            display: inline-block;
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .prediction {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🎤 Speech Emotion Recognition</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="audio" accept=".wav" required><br>
+        <button type="submit">Predict Emotion</button>
+    </form>
+
+    {% if prediction %}
+        <div class="prediction">
+            <strong>Predicted Emotion:</strong> {{ prediction }}
+        </div>
+    {% endif %}
+
+</body>
+</html>

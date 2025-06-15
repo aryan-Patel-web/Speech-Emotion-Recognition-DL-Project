@@ -1,0 +1,13 @@
+librosa # for analyzing audio and music
+
+
+soundfile 
+numpy 
+# sklearn 
+pyaudio
+scikit-learn
+pandas
+
+flask
+resampy
+
